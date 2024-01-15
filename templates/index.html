@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot like ChatGPT</title>
+    <title>ChatbotUi</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-box" id="chat-box"></div>
-        <div id="inputArea">
-            <input type="text" id="user-input" placeholder="Type a message..." autofocus>
-            <button onclick="sendMessage()">Send</button>
+
+
+    <div id="chatSection">
+        <div id="chatHeader">
+            <div id="chatHeaderContents">
+                <p>Mr Guha</p>
+                <button>X</button>
+            </div>
         </div>
 
+        <div id="chatContent"> 
+            <div class="loader-container" style="display: none;">
+                <div class="loader"></div>
+            </div>
+            
+            <!-- <div class="message bot-message">
+                <div class="botText">Bot's message here</div>
+            </div>
+            
+            <div class="message user-message">
+                <div class="userText">User's message here</div>
+            </div> -->
+
+        </div>
+
+        <div id="inputSection">
+            <input type="text" name="" id="chatInput">
+            <button>send</button>
+        </div>
+        
+
     </div>
-    <script src="/static/script.js"></script>
+   <script src="/static/script.js"></script> 
 </body>
+
 </html>

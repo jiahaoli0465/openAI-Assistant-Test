@@ -9,18 +9,9 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', "it's a secret")
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 client = openai.Client(api_key=openai.api_key)
 
-# Create an Assistant
-assistant_id = 'asst_egsGHf3oxqSSbXxY5QzqUCnt'
+# Current Assistant: MiniMe
+assistant_id = 'asst_9DWjbnuDqjQY45Lw0oIGKmBb'
 
-# @app.before_first_request
-# def create_assistant():
-#     global assistant_id
-#     assistant = client.beta.assistants.create(
-#         name="Personal therapist",
-#         instructions="You are a personal therapist named Jacob. Make sure you act like a therapist.",
-#         model="gpt-3.5-turbo-16k"
-#     )
-#     assistant_id = assistant.id
 
 @app.route('/')
 def show_home():
